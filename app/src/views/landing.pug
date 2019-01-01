@@ -1,0 +1,12 @@
+extends index.pug
+
+block sidenav
+  include sidenav
+block main
+  div(class="main")
+    a(class='button' href='./game') Create a game
+    form(method='POST' action='/game')
+      div.form-group
+        label(for='id') Code:
+        input#id.form-control(type='text', placeholder='game code' name='id')
+      button.btn.btn-primary(type='submit') Sign up

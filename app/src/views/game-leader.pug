@@ -1,0 +1,11 @@
+extends index.pug
+
+block sidenav
+  include sidenav
+block main
+  div(class="main")
+    include components/score-table
+    each row in map
+      div(class='row-container')
+        each word in row
+          div(class=`word-box ${word.tile_type} ${word.tile_type}-revealed`)= word.text

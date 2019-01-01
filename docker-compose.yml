@@ -1,0 +1,19 @@
+version: "2"
+services:
+  app:
+    build:
+      context: ./app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+    volumes:
+      - './app/src:/usr/src/app'
+
+  mongodb:
+    image: mongo:3.5
+    ports:
+      - "27018:27018"
+    command: mongod --port 27018 --bind_ip_all
+    volumes: 
+      - './mongodbdata:/data/db'
