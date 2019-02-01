@@ -47,7 +47,9 @@ async function createSession() {
 
 function generateMap() {
 	var red_start = Math.random() >= 0.5;
+
 	var template_result_map = [
+		{ 'tile_type': red_start ? 'red' : 'blue', 'text': randomWord() },
 		{ 'tile_type': 'red', 'text': randomWord() },
 		{ 'tile_type': 'red', 'text': randomWord() },
 		{ 'tile_type': 'red', 'text': randomWord() },
@@ -56,7 +58,6 @@ function generateMap() {
 		{ 'tile_type': 'red', 'text': randomWord() },
 		{ 'tile_type': 'red', 'text': randomWord() },
 		{ 'tile_type': 'red', 'text': randomWord() },
-		{ 'tile_type': 'blue', 'text': randomWord() },
 		{ 'tile_type': 'blue', 'text': randomWord() },
 		{ 'tile_type': 'blue', 'text': randomWord() },
 		{ 'tile_type': 'blue', 'text': randomWord() },

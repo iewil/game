@@ -15,7 +15,6 @@ async function getSession(session_id) {
   } else if (session.length == 0) {
   	throw Error("no session found")
   }
-  
 }
 
 /**

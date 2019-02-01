@@ -3,18 +3,25 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "npm run watch-code",
+    "watch-code": "node ./bin/www",
+    "css": "node-sass public/scss/style.scss -o public/css/style.css",
+    "watch-css": "npm run css && node-sass public/scss/style.scss -wo public/css/style.css"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
-    "http-errors": "~1.6.2",
+    "http-errors": "^1.6.3",
     "mongoose": "^5.4.1",
     "morgan": "~1.9.0",
     "pug": "2.0.0-beta11",
     "random-words": "^1.1.0",
     "randomstring": "^1.1.5",
     "sqlite3": "^4.0.4"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9"
   }
 }
